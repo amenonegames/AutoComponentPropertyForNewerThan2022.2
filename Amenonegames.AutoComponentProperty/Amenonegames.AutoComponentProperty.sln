@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amenonegames.AutoComponentProperty", "Amenonegames.AutoComponentProperty\Amenonegames.AutoComponentProperty.csproj", "{B7453D47-7019-4AF5-B7CB-FA702A2BCF90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "SandBox\SandBox.csproj", "{A4D7E4B4-D1FB-4E54-9987-1A10E5C045E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7453D47-7019-4AF5-B7CB-FA702A2BCF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7453D47-7019-4AF5-B7CB-FA702A2BCF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7453D47-7019-4AF5-B7CB-FA702A2BCF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7453D47-7019-4AF5-B7CB-FA702A2BCF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D7E4B4-D1FB-4E54-9987-1A10E5C045E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D7E4B4-D1FB-4E54-9987-1A10E5C045E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D7E4B4-D1FB-4E54-9987-1A10E5C045E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D7E4B4-D1FB-4E54-9987-1A10E5C045E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
