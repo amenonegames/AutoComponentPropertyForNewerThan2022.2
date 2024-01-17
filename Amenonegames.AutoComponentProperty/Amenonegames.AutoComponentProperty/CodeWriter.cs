@@ -76,6 +76,19 @@ class CodeWriter
         }
     }
 
+    public void AppendLineBreak( bool indent = true)
+    {
+        if (indent)
+        {
+            buffer.Append($"\n{new string(' ', indentLevel * 4)}");
+        }
+        else
+        {
+            buffer.Append("\n");
+        }
+        
+    }
+
     public void AppendLine(string? value = null, bool indent = true)
     {
         if (string.IsNullOrEmpty(value))

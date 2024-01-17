@@ -24,8 +24,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Linq;
-using Amenonegames.AutoPropertyGenerator;
+using Amenonegames.AutoComponentProperty;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -54,9 +53,9 @@ class VariableTypeMeta
     public string TypeName { get; }
     public string FullTypeName { get; }
     //public IReadOnlyList<IMethodSymbol> Constructors { get; }
-    public AXS AXSArgument { get; }
+    public GetFrom GetFromArgument { get; }
     public ITypeSymbol? SourceType { get; }
-    public ITypeSymbol? TargetType { get; }
+    public bool IsSourceTypeArray { get; }
     
     public ClassDeclarationSyntax? ClassSyntax;
     public INamedTypeSymbol ClassSymbol { get; }
@@ -75,8 +74,9 @@ class VariableTypeMeta
         Symbol = symbol;
         
         if (compilation != null) SourceType = GetVariableTypeSymbol(Syntax, compilation);
-        TargetType = SourceType;
-        AXSArgument = AXS.PublicGet;
+        IsSourceTypeArray = SourceType?.TypeKind == TypeKind.Array;
+        
+        GetFromArgument = GetFrom.This;
         
         this.references = references;
         
@@ -92,19 +92,14 @@ class VariableTypeMeta
         {
             foreach (var arg in attributeData.ConstructorArguments)
             {
-                if (SymbolEqualityComparer.Default.Equals(arg.Type, references.AXSAttribute))
+                if (SymbolEqualityComparer.Default.Equals(arg.Type, references.GetFromAttribute))
                 {
-                    AXSArgument = arg.Value != null
-                        ? (AXS)arg.Value
-                        : AXS.PublicGet;
+                    GetFromArgument = arg.Value != null
+                        ? (GetFrom)arg.Value
+                        : GetFrom.This;
                     continue;
                 }
                 
-                if (SymbolEqualityComparer.Default.Equals(arg.Type, references.TypeAttribute))
-                {
-                    TargetType = arg.Value as ITypeSymbol;
-                    continue;
-                }
             }
         }
 

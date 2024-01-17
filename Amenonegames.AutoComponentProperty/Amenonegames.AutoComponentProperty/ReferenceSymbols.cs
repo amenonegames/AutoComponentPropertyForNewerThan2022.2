@@ -30,12 +30,10 @@ public class ReferenceSymbols
     {
         return new ReferenceSymbols
         {
-            AXSAttribute = compilation.GetTypeByMetadataName("AutoProperty.AXS")!,
-            TypeAttribute = compilation.GetTypeByMetadataName("System.Type")!,
+            GetFromAttribute = compilation.GetTypeByMetadataName("AutoComponentProperty.GetFrom")!,
         };
     }
 
-    public INamedTypeSymbol AXSAttribute { get; private set; } = default!;
-    public INamedTypeSymbol TypeAttribute { get; private set; } = default!;
+    public INamedTypeSymbol GetFromAttribute { get; private set; } = default!;
 
 }

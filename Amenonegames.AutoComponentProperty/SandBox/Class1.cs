@@ -1,9 +1,13 @@
 ﻿using System;
-using AutoProperty;
+using AutoComponentProperty;
+
 namespace SandBox
 {
     public partial class Class1
     {
-        [AutoProp] private int _myInt;
+        [CompoProp(GetFrom.This)]private int _myInt;
+        [CompoProp(GetFrom.Parent)]private int _myInt2;
+        [CompoProp(GetFrom.Children)]private int _myInt3;
+        [CompoProp]private int[] _myInt4;
     }
 }

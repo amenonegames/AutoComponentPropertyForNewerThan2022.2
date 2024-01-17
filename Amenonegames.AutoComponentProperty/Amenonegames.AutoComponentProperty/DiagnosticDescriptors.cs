@@ -28,10 +28,10 @@ namespace Amenonegames.SourceGenerator;
 
 static class DiagnosticDescriptors
 {
-    const string Category = "Amenonegames.AutoPropertyGenerator";
+    const string Category = "Amenonegames.AutoComponentPropertyGenerator";
 
     public static readonly DiagnosticDescriptor UnexpectedErrorDescriptor = new(
-        id: "AutoPropertyGenerator001",
+        id: "AutoComponentPropertyGenerator001",
         title: "Unexpected error during source code generation",
         messageFormat: "Unexpected error occurred during source code code generation: {0}",
         category: "Usage",
@@ -39,33 +39,33 @@ static class DiagnosticDescriptors
         isEnabledByDefault: true);
 
     public static readonly DiagnosticDescriptor ClassNotFound = new(
-        id: "AutoPropertyGenerator002",
-        title: "Parent Class not found in AutoPropertyGenerator field",
-        messageFormat: "Parent Class not found in AutoPropertyGenerator declaration '{0}'",
+        id: "AutoComponentPropertyGenerator002",
+        title: "Parent Class not found in AutoComponentPropertyGenerator field",
+        messageFormat: "Parent Class not found in AutoComponentPropertyGenerator declaration '{0}'",
         category: Category,
         defaultSeverity: DiagnosticSeverity.Error,
         isEnabledByDefault: true);
     
     public static readonly DiagnosticDescriptor MustBePartial = new(
-        id: "AutoPropertyGenerator003",
-        title: "AutoPropertyGenerator class must be partial",
-        messageFormat: "The Class using AutoPropertyGenerator '{0}' must be partial",
+        id: "AutoComponentPropertyGenerator003",
+        title: "AutoComponentPropertyGenerator class must be partial",
+        messageFormat: "The Class using AutoComponentPropertyGenerator '{0}' must be partial",
         category: Category,
         defaultSeverity: DiagnosticSeverity.Error,
         isEnabledByDefault: true);
 
     public static readonly DiagnosticDescriptor VaribleNameNotFound = new(
-        id: "AutoPropertyGenerator004",
-        title: "AutoPropertyGenerator variable name not found",
-        messageFormat: "AutoPropertyGenerator variable name not found in '{0}'",
+        id: "AutoComponentPropertyGenerator004",
+        title: "AutoComponentPropertyGenerator variable name not found",
+        messageFormat: "AutoComponentPropertyGenerator variable name not found in '{0}'",
         category: Category,
         defaultSeverity: DiagnosticSeverity.Error,
         isEnabledByDefault: true);
     
     public static readonly DiagnosticDescriptor AXSNotFound = new(
-        id: "AutoPropertyGenerator005",
-        title: "AutoPropertyGenerator AXS not found",
-        messageFormat: "AutoPropertyGenerator AXS not found in '{0}'",
+        id: "AutoComponentPropertyGenerator005",
+        title: "AutoComponentPropertyGenerator AXS not found",
+        messageFormat: "AutoComponentPropertyGenerator AXS not found in '{0}'",
         category: Category,
         defaultSeverity: DiagnosticSeverity.Error,
         isEnabledByDefault: true);
