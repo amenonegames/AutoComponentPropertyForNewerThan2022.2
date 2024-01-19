@@ -22,7 +22,7 @@ namespace Amenonegames.AutoComponentProperty
         
         public void Initialize(IncrementalGeneratorInitializationContext  context)
         {
-            context.RegisterPostInitializationOutput(x => SetDefaultAttribute(x));
+            context.RegisterPostInitializationOutput( static x => SetDefaultAttribute(x));
             var provider = context.SyntaxProvider.ForAttributeWithMetadataName
                 (
                     context,
@@ -36,7 +36,7 @@ namespace Amenonegames.AutoComponentProperty
             
             context.RegisterSourceOutput(
                 context.CompilationProvider.Combine(provider.Collect()),
-                (sourceProductionContext, t) =>
+                static (sourceProductionContext, t) =>
                 {
 
                     
@@ -226,7 +226,7 @@ namespace Amenonegames.AutoComponentProperty
             return null; // グローバル名前空間にある場合
         }
         
-        private void SetDefaultAttribute(IncrementalGeneratorPostInitializationContext context)
+        private static void SetDefaultAttribute(IncrementalGeneratorPostInitializationContext context)
         {
             // AutoPropertyAttributeのコード本体
             const string AttributeText = @"
