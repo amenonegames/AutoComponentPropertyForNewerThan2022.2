@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tamed\\Documents\\project\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty.csproj": {}
+    "D:\\projects\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tamed\\Documents\\project\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty.csproj": {
+    "D:\\projects\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tamed\\Documents\\project\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty.csproj",
+        "projectUniqueName": "D:\\projects\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty.csproj",
         "projectName": "Amenonegames.AutoComponentProperty",
-        "projectPath": "C:\\Users\\tamed\\Documents\\project\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty.csproj",
+        "projectPath": "D:\\projects\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty.csproj",
         "packagesPath": "C:\\Users\\tamed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tamed\\Documents\\project\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\obj\\",
+        "outputPath": "D:\\projects\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\Amenonegames.AutoComponentProperty\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\tamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +73,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\tamed\\.dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
         }
       }
     }

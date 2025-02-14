@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = Amenonegames.AutoComponentProperty
-build_property.ProjectDir = C:\Users\tamed\Documents\project\AutoComponentPropertyForNewerThan2022.2\Amenonegames.AutoComponentProperty\Amenonegames.AutoComponentProperty\
+build_property.ProjectDir = D:\projects\AutoComponentPropertyForNewerThan2022.2\Amenonegames.AutoComponentProperty\Amenonegames.AutoComponentProperty\
 build_property.PolySharpUsePublicAccessibilityForGeneratedTypes = 
 build_property.PolySharpIncludeRuntimeSupportedAttributes = 
 build_property.PolySharpUseInteropServices2NamespaceForUnmanagedCallersOnlyAttribute = 

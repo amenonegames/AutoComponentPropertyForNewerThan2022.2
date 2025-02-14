@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4hfMW09W2T+KTZJnX0aj/YR/Km2P4Vq+Gdyoau8Pkwv1whxIrwlgi9BLZ+A846S71xS98Bp298JQ2aZOZJczVg==",
+  "dgSpecHash": "U1KeXCj5LI8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tamed\\Documents\\project\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\SandBox\\SandBox.csproj",
+  "projectFilePath": "D:\\projects\\AutoComponentPropertyForNewerThan2022.2\\Amenonegames.AutoComponentProperty\\SandBox\\SandBox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tamed\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\tamed\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

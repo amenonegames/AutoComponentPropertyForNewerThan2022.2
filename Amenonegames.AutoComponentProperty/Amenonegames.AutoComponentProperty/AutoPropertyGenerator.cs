@@ -166,32 +166,49 @@ namespace Amenonegames.AutoComponentProperty
 
                     codeWriter.AppendLineBreak(false);
                     codeWriter.Append(
-                        $"private {sourceClassName} {propertyName} => {originalVariableName} is null ");
+                        $"private {sourceClassName} {propertyName} ");
                     codeWriter.AppendLineBreak(false);
-                    codeWriter.Append($"? ({originalVariableName} = ");
+                    codeWriter.BeginBlock();
+                    codeWriter.Append($"get");
+                    codeWriter.AppendLineBreak(false);
+                    codeWriter.BeginBlock();
+                    codeWriter.Append($"if ({originalVariableName} == null)");
+                    codeWriter.AppendLineBreak(false);
+                    codeWriter.BeginBlock();
+                    
+                    // codeWriter.AppendLineBreak(false);
+                    // codeWriter.Append($"{originalVariableName} = ");
                     
                     var from = variableTypeMeta?.GetFromArgument ?? GetFrom.This;
                     var isArray = variableTypeMeta?.IsSourceTypeArray ?? false;
 
                     if (from == GetFrom.This && !isArray)
-                        codeWriter.Append($"GetComponent<{sourceClassName}>())",false);
+                        codeWriter.Append($"return {originalVariableName} = GetComponent<{sourceClassName}>();");
                     else if (from == GetFrom.Children && !isArray)
-                        codeWriter.Append($"GetComponentInChildren<{sourceClassName}>(true))",false);
+                        codeWriter.Append($"return {originalVariableName} = GetComponentInChildren<{sourceClassName}>(true);");
                     else if (from == GetFrom.Parent && !isArray)
-                        codeWriter.Append($"GetComponentInParent<{sourceClassName}>(true))",false);
+                        codeWriter.Append($"return {originalVariableName} = GetComponentInParent<{sourceClassName}>(true);");
                     else if (from == GetFrom.This && isArray)
-                        codeWriter.Append($"GetComponents<{rowClassName}>())",false);
+                        codeWriter.Append($"return {originalVariableName} = GetComponents<{rowClassName}>();");
                     else if (from == GetFrom.Children && isArray)
-                        codeWriter.Append($"GetComponentsInChildren<{rowClassName}>(true))",false);
+                        codeWriter.Append($"return {originalVariableName} = GetComponentsInChildren<{rowClassName}>(true);");
                     else if (from == GetFrom.Parent && isArray)
-                        codeWriter.Append($"GetComponentsInParent<{rowClassName}>(true))",false);
+                        codeWriter.Append($"return {originalVariableName} = GetComponentsInParent<{rowClassName}>(true);");
                     else
-                        codeWriter.Append($"GetComponent<{sourceClassName}>())",false);
+                        codeWriter.Append($"return {originalVariableName} = GetComponent<{sourceClassName}>();");
 
                     codeWriter.AppendLineBreak(false);
-                    codeWriter.Append($": {originalVariableName};");
+                    // codeWriter.Append($": {originalVariableName};");
+                    codeWriter.EndBlock();
+                    codeWriter.Append($"else return {originalVariableName};");
+                    
                     codeWriter.AppendLineBreak(false);
+                    codeWriter.EndBlock();
                     codeWriter.AppendLineBreak(false);
+                    codeWriter.EndBlock();
+                    
+                    // codeWriter.AppendLineBreak(false);
+                    // codeWriter.AppendLineBreak(false);
                 }
                 
                 codeWriter.EndBlock();
